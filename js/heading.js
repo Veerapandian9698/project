@@ -1,3 +1,4 @@
+//creation of https object for XMLHttpRequest
 function boldHTTP() {
   this.https = new XMLHttpRequest();
 }
@@ -22,7 +23,7 @@ boldHTTP.prototype.get = function(url, callback) {
 
 
 const https = new boldHTTP;
-
+//function for getting data from JSON file
 https.get('/json/heading.json', function(err, posts) {
   if(err) {
     console.log(err);
@@ -33,6 +34,7 @@ https.get('/json/heading.json', function(err, posts) {
       
       var result1 = "";
       var template='<p class="text">{text}</p>';
+      //Replacing Json Key to the Text class.
        result1=template.replace("{text}",obj1.title);
        console.log(result1);
           document.getElementById('demo').innerHTML = result1;
