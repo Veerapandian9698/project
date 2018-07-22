@@ -1,17 +1,17 @@
-//Menu bar creation
+//Menu bar creating function
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
-
+//Exit Menu bar function
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-//Scrolling functionality
+
 var marginY = 0;
 var destination=0;
 var speed=5;
 var scroller=null;
-
+//Scrolling Functionality for Tools,Conatact us and arrow navigation
 function initScroll(elementId){
   destination = document.getElementById(elementId).offsetTop;
   scroller=setTimeout(function(){
@@ -49,7 +49,7 @@ easyHTTP.prototype.get = function(url, callback) {
 
 
 const http = new easyHTTP;
-// Get Posts
+// Get Posts from JSON file
 http.get('/json/first.json', function(err, posts) {
   if(err) {
     console.log(err);
