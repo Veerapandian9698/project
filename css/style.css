@@ -576,7 +576,15 @@ ul.footer-navigation li.list1 a{
 	margin:0px auto;
 }
 
-
+@media only screen and (min-width: 320px) and (max-width: 355px)
+{
+	.header-side-bar{
+		width:25%;
+	}
+	.list{
+		padding:2px;
+	}
+}
 
 @media only screen and (max-width: 767px){
 	.appsec-image {
